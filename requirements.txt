@@ -1,0 +1,14 @@
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+networkx
+torch
+torchvision
+torchaudio
+torch-geometric
+jupyter
+ipykernel
+tqdm
+joblib
