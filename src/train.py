@@ -18,13 +18,13 @@ from tqdm import tqdm
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-class EnhancedGCNModel(nn.Module):
+class GCNModel(nn.Module):
     """
     Enhanced Graph Convolutional Network model with skip connections and deeper architecture.
     """
     def __init__(self, input_dim, hidden_dim, output_dim, num_layers=4,
                 dropout=0.5, residual=True, batch_norm=True, layer_norm=True):
-        super(EnhancedGCNModel, self).__init__()
+        super(GCNModel, self).__init__()
         
         self.num_layers = num_layers
         self.dropout = dropout
@@ -155,13 +155,13 @@ class EnhancedGCNModel(nn.Module):
         
         return h
 
-class EnhancedSAGEModel(nn.Module):
+class SAGEModel(nn.Module):
     """
     Enhanced GraphSAGE model with advanced architecture.
     """
     def __init__(self, input_dim, hidden_dim, output_dim, num_layers=4, 
                 dropout=0.5, residual=True, batch_norm=True, aggr='mean'):
-        super(EnhancedSAGEModel, self).__init__()
+        super(SAGEModel, self).__init__()
         
         self.num_layers = num_layers
         self.dropout = dropout
@@ -288,14 +288,14 @@ class EnhancedSAGEModel(nn.Module):
         
         return h
 
-class EnhancedGATModel(nn.Module):
+class GATModel(nn.Module):
     """
     Enhanced Graph Attention Network model.
     """
     def __init__(self, input_dim, hidden_dim, output_dim, num_layers=3, 
                 heads=4, dropout=0.5, residual=True, batch_norm=True, 
                 use_gatv2=True):
-        super(EnhancedGATModel, self).__init__()
+        super(GATModel, self).__init__()
         
         self.num_layers = num_layers
         self.dropout = dropout
@@ -590,7 +590,7 @@ def train_model_with_advanced_schedule(
     lr=3e-4, weight_decay=1e-4, device='cpu', model_dir='models', 
     model_name='gnn', grad_clip=1.0, use_one_cycle=True):
     """
-    Train a GNN model with advanced learning rate scheduling and monitoring.
+    Train a GNN model with learning rate scheduling and monitoring.
     
     Parameters:
     -----------
@@ -782,7 +782,7 @@ def train_model_with_advanced_schedule(
 
 def main():
     """
-    Main function to load data and train enhanced models.
+    Main function to load data and train models.
     """
     # Set random seeds for reproducibility
     np.random.seed(42)
@@ -826,7 +826,7 @@ def main():
         models_to_train = [
             {
                 'name': 'gcn',
-                'class': EnhancedGCNModel,
+                'class': GCNModel,
                 'params': {
                     'input_dim': input_dim,
                     'hidden_dim': hidden_dim,
@@ -848,7 +848,7 @@ def main():
             },
             {
                 'name': 'sage',
-                'class': EnhancedSAGEModel,
+                'class': SAGEModel,
                 'params': {
                     'input_dim': input_dim,
                     'hidden_dim': hidden_dim,
@@ -870,7 +870,7 @@ def main():
             },
             {
                 'name': 'gat',
-                'class': EnhancedGATModel,
+                'class': GATModel,
                 'params': {
                     'input_dim': input_dim,
                     'hidden_dim': 64,  # Smaller due to multiple heads
