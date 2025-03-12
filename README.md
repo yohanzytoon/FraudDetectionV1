@@ -12,24 +12,6 @@ Cryptocurrency fraud detection presents unique challenges due to the pseudonymou
 4. **Evaluating and comparing model performance** with comprehensive metrics
 5. **Visualizing transaction patterns** to provide insights into network structures
 
-## Repository Structure
-
-```
-├── data/
-│   ├── raw/           # Raw transaction data (classes.csv, edgelist.csv, Features.csv)
-│   └── processed/     # Processed data ready for model training
-├── models/            # Trained model weights and training history
-├── reports/
-│   └── figures/       # Visualizations and evaluation plots
-├── data_preparation.py       # Data loading and preprocessing
-├── feature_extraction.py     # Graph-based feature engineering
-├── gnn_model.py              # GNN model implementations (GCN, GraphSAGE, GAT)
-├── train.py                  # Model training procedures
-├── evaluate.py               # Model evaluation and metrics
-├── visualization.py          # Network and embedding visualizations
-├── requirements.txt          # Python dependencies
-└── README.md                 # Project documentation
-```
 
 ## Models Implemented
 
