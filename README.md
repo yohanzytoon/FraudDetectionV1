@@ -111,10 +111,3 @@ Our analysis revealed several important patterns in fraudulent transactions:
 - NumPy
 - Pandas
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Acknowledgments
-
-This implementation builds upon research in graph neural networks and fraud detection. We acknowledge the contributions of the open-source community and the developers of PyTorch Geometric.
