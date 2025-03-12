@@ -100,14 +100,3 @@ Our analysis revealed several important patterns in fraudulent transactions:
 - Development of real-time fraud detection capabilities
 - Investigation of explainable AI methods for fraud detection
 
-## Dependencies
-
-- PyTorch
-- PyTorch Geometric
-- NetworkX
-- Scikit-learn
-- Matplotlib
-- Seaborn
-- NumPy
-- Pandas
-
