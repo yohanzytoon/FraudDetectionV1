@@ -37,8 +37,8 @@ The GraphSAGE model demonstrated the best overall performance, particularly in R
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/username/bitcoin-fraud-detection.git
-cd bitcoin-fraud-detection
+git clone https://github.com/yohanzytoon/FraudDetectionV1.git
+cd FraudDetectionV1
 ```
 
 2. Install dependencies:
